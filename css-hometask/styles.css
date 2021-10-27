@@ -1,0 +1,246 @@
+:root {
+  --main-font-color: #323232;
+  --secondary-font-color: #545454;
+  --main-font-size: 18px;
+  --secondary--font-size: 14px;
+  --main--color: #959595;
+  --secondary--color: #f2f2f2;
+  --highlighted--color: #e97f03;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-font-color);
+  font-size: var(--main-font-size);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1448px;
+}
+
+.content-wrapper {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+/* ******
+HEADER 
+****** */
+
+.header {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__input-container {
+  height: 100%;
+  width: 300px;
+}
+
+.header__input-container:focus-within {
+  border-bottom: 2px solid var(--highlighted--color);
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header__input-container:focus-within path {
+  fill: var(--highlighted--color);
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.header__form-label {
+  cursor: pointer;
+}
+
+.header__form-label p {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.header__input {
+  margin-left: 8px;
+  border: none;
+  color: var(--main-font-color);
+  font-size: var(--secondary--font-size);
+  height: 100%;
+  width: 100%;
+}
+
+.header__input::placeholder {
+  color: var(--main-font-color);
+  font-size: var(--secondary--font-size);
+}
+
+.header__input:focus {
+  outline: none;
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__buttons button + button {
+  margin-left: 16px;
+}
+
+.header__button-account,
+.header__button-shop {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* ******
+MAIN
+****** */
+
+.main {
+  margin-top: 24px;
+  margin-bottom: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card--active {
+  background: var(--secondary--color);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.card__favorite-icon {
+  align-self: flex-end;
+  margin-top: 8px;
+  margin-right: 8px;
+  
+  cursor: pointer;
+}
+
+.card__favorite-icon path {
+  fill: transparent;
+  stroke: var(--main--color);
+  stroke-width: 2px;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card__favorite-icon--active path {
+  fill: var(--highlighted--color);
+  stroke: var(--highlighted--color);
+}
+
+.card__image {
+  width: 220px;
+  height: 140px;
+  margin-top: 8px;
+  object-fit: cover;
+}
+
+.card__title {
+  font-size: var(--main-font-size);
+  margin-top: 19px;
+  margin-bottom: 11px;
+}
+
+.card__title a {
+  text-decoration: none;
+  color: var(--main-font-color);
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.card__title a:hover,
+.card__title a:active {
+  color: var(--highlighted--color);
+}
+
+.card__price {
+  font-size: var(--secondary--font-size);
+  color: var(--secondary-font-color);
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* ******
+MEDIA
+****** */
+
+@media (max-width: 525px) {
+  .header__input-container {
+    width: 200px;
+  }
+
+  .card {
+    width: 155px;
+  }
+
+  .card__image {
+    width: 155px;
+  }
+}
+
+@media (max-width: 390px) {
+  .header__input-container {
+    width: 150px;
+  }
+
+  .card {
+    width: 125px;
+  }
+
+  .card__image {
+    width: 125px;
+  }
+}
