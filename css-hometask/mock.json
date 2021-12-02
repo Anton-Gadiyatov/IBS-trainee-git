@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "projectName": "project_name",
+    "projectCustomer": "project_customer",
+    "fixedPrice": true,
+    "timeAndMaterial": true,
+    "modernization": false,
+    "functionalDirection": "functional",
+    "subjectArea": "subject_area",
+    "projectDescription": "project_decription",
+    "projectTasks": "project_tasks",
+    "projectStage": "project_stage",
+    "deadline": "2021-12-12",
+    "technology": [],
+    "stakeholders": 1,
+    "methodology": "methodology",
+    "product": true,
+    "teamDescription": "team_description",
+    "location": "location",
+    "office": null,
+    "schedule": "scheldule",
+    "timeShift": true,
+    "startDate": "2021-11-22",
+    "overtime": "overtime",
+    "startProcedure": "start_procedure",
+    "documenting": true,
+    "standard": true,
+    "mvp": true
+  }
+]
